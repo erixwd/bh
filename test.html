@@ -79,16 +79,22 @@
                         <h3>Stress:</h3>
                         <div class="padding-space"></div>
                         <h4 id="stressText"></h4>
+                        <div class="padding-space"></div>
+                        <h3 class="padding-bottom" id="stressRating"></h3>
                     </div>
                     <div class="flex-side">
                         <h3>Ansia:</h3>
                         <div class="padding-space"></div>
                         <h4 id="ansiaText"></h4>
+                        <div class="padding-space"></div>
+                        <h3 class="padding-bottom" id="ansiaRating"></h3>
                     </div>
                     <div class="flex-side">
                         <h3>Depressione:</h3>
                         <div class="padding-space"></div>
                         <h4 class="padding-bottom" id="depressioneText"></h4>
+                        <div class="padding-space"></div>
+                        <h3 class="padding-bottom" id="depressioneRating"></h3>
                     </div>
                     <div id="progressBar">
                         <div id="progressBarFull"></div>
@@ -327,24 +333,72 @@ function endGame() {
     // Calculate averages
 
     const depressioneText = document.getElementById('depressioneText');
-    depressioneText.innerText = Math.floor((depr / 21) * 100) + "%";
+    depressioneText.innerText = Math.floor((depr / 28) * 100) + "%";
 
     const ansiaText = document.getElementById('ansiaText');
-    ansiaText.innerText = Math.floor((anx / 21) * 100) + "%";
+    ansiaText.innerText = Math.floor((anx / 28) * 100) + "%";
 
     const stressText = document.getElementById('stressText');
-    stressText.innerText = Math.floor((str / 21) * 100) + "%";
+    stressText.innerText = Math.floor((str / 28) * 100) + "%";
+
 
     const average = (parseInt(depr) + parseInt(anx) + parseInt(str)) / 3;
 
-    const avrg = Math.floor((average / 21) * 100);
+    const avrg = Math.floor((average / 28) * 100);
     progressBarFull.style.width = `${avrg}%`;
+
+
+    //Judge results
+    judgeResults();
 
         // Hide the game page
         document.getElementById('gamePage').classList.remove('active');
         // Show the end page
         document.getElementById('endPage').classList.add('active');
     }
+
+    
+// Judge results
+function judgeResults() {
+    // Judge depressione
+    if (depr >= 0 && depr <= 5) {
+        depressioneRating.innerText = "(Normale)";
+    } else if (depr >= 6 && depr <= 8) {
+        depressioneRating.innerText = "(Leggera)";
+    } else if (depr >= 9 && depr <= 12) {
+        depressioneRating.innerText = "(Moderata)";
+    } else if (depr >= 13 && depr <= 16) {
+        depressioneRating.innerText = "(Severa)";
+    } else if (depr >= 17 && depr <= 28) {
+        depressioneRating.innerText = "(Molto Severa)";
+    }
+
+    // Judge ansia
+    if (anx >= 0 && anx <= 4) {
+        ansiaRating.innerText = "(Normale)";
+    } else if (anx >= 5 && anx <= 7) {
+        ansiaRating.innerText = "(Leggera)";
+    } else if (anx >= 8 && anx <= 10) {
+        ansiaRating.innerText = "(Moderata)";
+    } else if (anx >= 11 && anx <= 13) {
+        ansiaRating.innerText = "(Severa)";
+    } else if (anx >= 14 && anx <= 28) {
+        ansiaRating.innerText = "(Molto Severa)";
+    }
+
+    // Judge stress
+    if (str >= 0 && str <= 8) {
+        stressRating.innerText = "(Normale)";
+    } else if (str >= 9 && str <= 11) {
+        stressRating.innerText = "(Leggero)";
+    } else if (str >= 12 && str <= 15) {
+        stressRating.innerText = "(Moderato)";
+    } else if (str >= 16 && str <= 20) {
+        stressRating.innerText = "(Severo)";
+    } else if (str >= 21 && str <= 28) {
+        stressRating.innerText = "(Molto Severo)";
+    }
+}
 
 
 function restart() {
