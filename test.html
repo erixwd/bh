@@ -357,10 +357,13 @@ function restart() {
     console.log('anx:', anx);
     console.log('str:', str);
 
+    setTimeout(() => {
         // Hide the game page
         document.getElementById('endPage').classList.remove('active');
         // Show the end page
         document.getElementById('startPage').classList.add('active');
+    }, 550);
+    
     }
 
     </script>
