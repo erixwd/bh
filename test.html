@@ -83,7 +83,7 @@
                         <div id="progressBarFull"></div>
                     </div>
                     <div class="flex-column padding-top">
-                        <a class="btn" href="/index.html">Ricomincia</a>
+                        <button id="restart" class="btn" onclick="restart()">Ricomincia</button>
                 </div>
             </div>
     </div>
@@ -153,7 +153,7 @@ let questions = [
         catgr: "str",
     },
     {
-        question: "Ero preoccupato/a per situazioni in cui avrei potuto entrare in panico e fare una figura",
+        question: "Ero preoccupato/a di fare una figura in situazioni nuove",
         catgr: "anx",
     },
     {
@@ -173,7 +173,7 @@ let questions = [
         catgr: "depr",
     },
     {
-        question: "Ero intollerante di qualsiasi cosa che mi impedisse di continuare ciò che stavo facendo",
+        question: "Ero intollerante di qualsiasi cosa che mi interrompesse",
         catgr: "str",
     },
     {
@@ -193,7 +193,7 @@ let questions = [
         catgr: "str",
     },
     {
-        question: "Mi sono reso/a conto dell'azione del mio cuore in assenza di sforzo fisico",
+        question: "Mi sono accorto dell'azione del mio cuore in assenza di sforzo fisico",
         catgr: "anx",
     },
     {
@@ -334,10 +334,29 @@ function endGame() {
         // Show the end page
         document.getElementById('endPage').classList.add('active');
     }
-    </script>
-</body>
-</html>
+
+
+function restart() {
+
+// Reset counters
+
+    depr = 0;
+    anx = 0;
+    str = 0;
+
+    console.log("Resetting counters:");
+
+    console.log('depr:', depr);
+    console.log('anx:', anx);
+    console.log('str:', str);
+
+        // Hide the game page
+        document.getElementById('endPage').classList.remove('active');
+        // Show the end page
+        document.getElementById('startPage').classList.add('active');
     }
+
     </script>
 </body>
+
 </html>

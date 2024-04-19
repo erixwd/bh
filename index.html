@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="LP.css">
+    <link rel="stylesheet" href="app.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Landing Page</title>
 </head>
 
 <body>
 
-    <!-- start Page -->
-    <div id="startPage" class="page active">
         <div class="container">
             <div class="flex-center flex-column">
                 <h5>Test Salute Mentale</h5>
-                <div id ="content"> </div>
+                <div id="divider"></div>
+
+                    <div id ="content" class="test-size"> </div>
+
+                    <div id="divider"></div>
     <script>
-                document.getElementById("content").innerHTML='<object type="type/html" data="test.html" ></object>';
+                document.getElementById("content").innerHTML='<object type="text/html" data="test.html" class="test-size"></object>';
     </script>
+
             </div>
         </div>
 
