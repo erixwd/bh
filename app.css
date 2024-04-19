@@ -1,0 +1,215 @@
+:root {
+    background-color: #191919;
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+/* Game font formatting */
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1rem;
+}
+
+h1 { /* counter */
+    font-size: 4.4rem;
+    color: #a0a5ce;
+    margin-bottom: 5rem;
+}
+
+h1 > span {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+h2 { /* question */
+    font-size: 2.2rem;
+    margin-bottom: 0rem;
+    font-weight: 700;
+    vertical-align: middle;
+    margin-bottom: 1.6rem;
+}
+
+h3 { /* categories */
+    font-size: 2.1rem;
+    font-weight: 400;
+}
+
+h4 { /* percentage */
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+h5 { /* end result */
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+h6 { /* title */
+    font-size: 5.4rem;
+    color: #a0a5ce;
+    margin-bottom: 5rem;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 53rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container > * {
+    width: 100%;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-side {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.padding-top {
+    padding-top: 4.5rem;
+}
+
+.padding-space {
+    padding: 0.4rem;
+}
+
+.padding-bottom {
+    padding-bottom: 3.4rem;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid rgb(175, 175, 175);
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #a0a5ce;
+    background-color: #191919;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(99, 99, 99, 0.4);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    transition: transform 150ms;
+}
+
+/* progress bar */
+
+#progressBar {
+    width: 20rem;
+    height: 0.6rem;
+
+}
+
+#progressBarFull {
+    height: 0.6em;
+    width: 0%;
+    background-color: rgb(175, 175, 175);
+    border-radius: 0.3rem;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(51, 51, 51);
+    border-radius: 1.5rem;
+    background-color: #191919;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(99, 99, 99, 0.25);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: #202020;
+    border-radius: 1.5rem;
+    color: #a0a5ce;
+    font-weight: 600;
+}
+
+.choice-text {
+    padding: 1.5rem;
+    width: 100%;
+    font-weight: 500;
+}
+
+.selected {
+    color: #a0a5ce;
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 2rem;
+}
+
+.hud-main-text {
+    text-align: right;
+    padding-left: 2rem;
+}
+
+.page {
+    display: none; /* Hide all pages by default */
+}
+
+.page.active {
+    display: block; /* Show the active page */
+}
