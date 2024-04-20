@@ -60,6 +60,9 @@ h6 { /* title */
 }
 
 
+
+/* //General styling */
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -96,6 +99,20 @@ h6 { /* title */
     margin-right: 2.5rem;
 }
 
+.test-size {
+    flex: center;
+    width: 100%;
+    height: 58rem;
+    max-width: 54rem;
+}
+
+.book-size {
+    flex: center;
+    width: 100%;
+    height: 112rem;
+    max-width: 54rem;
+}
+
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -109,13 +126,6 @@ h6 { /* title */
 .flex-center {
     justify-content: center;
     align-items: center;
-}
-
-.test-size {
-    flex: center;
-    width: 100%;
-    height: 58rem;
-    max-width: 54rem;
 }
 
 .padding-top {
@@ -170,7 +180,9 @@ h6 { /* title */
     transition: transform 150ms;
 }
 
-/* progress bar */
+
+
+/* //Test styling */
 
 #progressBar {
     width: 20rem;
@@ -238,9 +250,9 @@ h6 { /* title */
 }
 
 .page {
-    display: none; /* Hide all pages by default */
+    display: none;
 }
 
 .page.active {
-    display: block; /* Show the active page */
+    display: block;
 }
