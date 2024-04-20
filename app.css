@@ -81,15 +81,21 @@ h6 { /* title */
 
 #divider {
     width: 100%;
+    max-width: 54rem;
     height: 0.1rem;
     background-color: rgb(85, 85, 85);
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 #divider-bottom {
     width: 100%;
+    max-width: 54rem;
     height: 0.1rem;
     background-color: rgb(85, 85, 85);
     margin-bottom: 5.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 #callout {
@@ -113,6 +119,11 @@ h6 { /* title */
     max-width: 54rem;
 }
 
+.tofp {
+    position: absolute;
+    top: 30px;
+}
+
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -121,6 +132,7 @@ h6 { /* title */
 .flex-side {
     display: flex;
     flex-direction: row;
+    max-width: 54rem;
 }
 
 .flex-center {
@@ -142,6 +154,10 @@ h6 { /* title */
 
 .justify-center {
     justify-content: center;
+}
+
+.blank {
+    margin-bottom: 2.2rem;
 }
 
 .hidden {
