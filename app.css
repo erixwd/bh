@@ -84,8 +84,6 @@ h6 { /* title */
     max-width: 54rem;
     height: 0.1rem;
     background-color: rgb(85, 85, 85);
-    padding-left: 2rem;
-    padding-right: 2rem;
 }
 
 #divider-bottom {
@@ -94,8 +92,6 @@ h6 { /* title */
     height: 0.1rem;
     background-color: rgb(85, 85, 85);
     margin-bottom: 5.8rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
 }
 
 #callout {
