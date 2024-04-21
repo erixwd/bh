@@ -112,7 +112,7 @@ h6 { /* title */
 
 .book-size {
     flex: center;
-    width: 110%;
+    width: 100vw;
     height: 112rem;
     max-width: 54rem;
 }
