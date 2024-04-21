@@ -71,12 +71,12 @@ h6 { /* title */
     align-items: center;
     max-width: 64rem;
     margin: 0 auto;
-    padding: 2rem;
     background-color: rgb(0, 0, 0, 0);
 }
 
 .container > * {
     width: 100%;
+    padding: 2rem;
 }
 
 #divider {
@@ -84,6 +84,8 @@ h6 { /* title */
     max-width: 54rem;
     height: 0.1rem;
     background-color: rgb(85, 85, 85);
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 #divider-bottom {
