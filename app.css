@@ -11,6 +11,16 @@
     color: #ffffff;
 }
 
+body {
+    background-image: linear-gradient(348deg, rgba(37,38,47,1) 0%, rgba(25,25,25,1) 54%, rgba(65,69,69,1) 100%);
+    /*background: linear-gradient(129deg, rgba(78,78,80,1) 0%, rgba(7,6,5,1) 71%, rgba(132,108,94,1) 100%);*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
 h1,
 h2,
 h3,
@@ -20,7 +30,7 @@ h4 {
 
 h1 { /* counter */
     font-size: 4.4rem;
-    color: #a0a5ce;
+    color: #ffffff;
     margin-bottom: 5rem;
 }
 
@@ -53,12 +63,11 @@ h5 { /* end result */
     font-weight: 700;
 }
 
-h6 { /* title */
-    font-size: 5.4rem;
+h6 { /* counter */
+    font-size: 4.4rem;
     color: #a0a5ce;
     margin-bottom: 5rem;
 }
-
 
 
 /* //General styling */
@@ -117,6 +126,13 @@ h6 { /* title */
     max-width: 54rem;
 }
 
+.copy-size {
+    width: 100%;
+    max-width: 54rem;
+    height: 100rem;
+    padding: 1.4rem;
+}
+
 .tofp {
     position: absolute;
     top: 30px;
@@ -131,6 +147,14 @@ h6 { /* title */
     display: flex;
     flex-direction: row;
     max-width: 54rem;
+}
+
+.flex-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        max-width: 58rem;
 }
 
 .flex-center {
@@ -154,7 +178,7 @@ h6 { /* title */
     justify-content: center;
 }
 
-.blank {
+#blank {
     margin-bottom: 2.2rem;
 }
 
